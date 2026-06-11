@@ -93,10 +93,10 @@ void AAirCraft::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	{
 		if(AMyPlayerController* PlayerController = Cast<AMyPlayerController>(GetController()))
 		{
-			if(PlayerController->MoveAction)
+			if(PlayerController->AirMoveAction)
 			{
 				EnhancedInput->BindAction(
-					PlayerController->MoveAction,
+					PlayerController->AirMoveAction,
 					ETriggerEvent::Triggered,
 					this,
 					&AAirCraft::Move
